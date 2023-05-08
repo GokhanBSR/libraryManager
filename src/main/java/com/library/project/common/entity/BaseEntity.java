@@ -23,20 +23,13 @@ import java.util.UUID;
 @MappedSuperclass
 public abstract class BaseEntity {
 
-
     /**
-     * (Book and Borrower) Entity primaryKey UUID
+     * (Book and Borrower) Entity primaryKey ID
      */
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
-//    /**
-//     * Entity name info
-//     */
-//    @Column (name = "name")
-//    private String name;
 
     /**
      * (Book and Borrower) Entity Created Date

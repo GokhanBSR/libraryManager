@@ -16,6 +16,12 @@ public class BookServiceImplement extends BaseService<BookRepository, BookMapper
 //    BookRepository bookRepository;
     private final BookRepository bookRepository;
 
+    @Autowired
+    public BookServiceImplement(BookMapper mapper, BookRepository repository, BookRepository bookRepository) {
+        super(mapper,repository);
+        this.bookRepository = bookRepository;
+    }
+
     /**
      * book acount
      * @param isbn

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,12 +20,12 @@ public interface BookRepository extends BaseRepository <Book, Long> {
 //     */
 ////    List<Book> findAllByUuid(UUID uuids);
 //
-//    /**
-//     * drived query
-//     * @param title
-//     * @return find by book title
-//     */
-//    List<Book> findByTitle(String title);
+    /**
+     * drived query
+     * @param title
+     * @return find by book title
+     */
+    List<Book> findByTitle(String title);
 //
 //    /**
 //     * drived query
@@ -33,6 +34,9 @@ public interface BookRepository extends BaseRepository <Book, Long> {
 //     */
 //    List<Book> findByAuthor(String author);
     Book findByIsbn(String isbn);
+
+//    Book findByCreateDate (LocalDateTime localDateTime);
+//    Book findByCategory (String category);
 
 
 

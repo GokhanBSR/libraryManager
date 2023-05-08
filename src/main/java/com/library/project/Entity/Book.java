@@ -20,9 +20,6 @@ public class Book extends BaseEntity {
     /**
      *Entity Author info
      */
-
-
-
     @Column (name = "author")
     private String author;
 
@@ -38,7 +35,10 @@ public class Book extends BaseEntity {
     @Column (name = "ISBN")
     private String isbn;
 
-    private Integer availableCopies;
+    /**
+     * Books available copies info
+     */
+    private int availableCopies;
 
     /**
      * Entity Available copies info
@@ -47,12 +47,5 @@ public class Book extends BaseEntity {
     private boolean isEnable=true;
     @OneToMany(mappedBy = "book")
     private List<BookBorrower> bookBorrowerList;
-
-//    /**
-//     * Entity Category info
-//     */
-//    @Column (name = "Category")
-//    private String category;
-
 
 }

@@ -31,6 +31,7 @@ public interface BorrowerRepository extends BaseRepository <Borrower, Long> {
 //     * @return borrower email
 //     */
     Borrower findByEmail (String email);
+
     Borrower findByNameSurname (String nameSurname);
 
 //    /**

@@ -30,14 +30,14 @@ public class Borrower extends BaseEntity {
     private String nameSurname;
 
     /**
-     * Borrowers email info
+     * Borrowers email information
      */
     @Size(min = 10, max = 50)
     @Column(name = "email")
     private String email;
 
     /**
-     * Borrowers phone number info
+     * Borrowers phone number information
      */
     @Size(min = 6, max = 20)
     @Column(name = "phone_number")
