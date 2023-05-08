@@ -32,11 +32,11 @@ public class BookController {
         return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
     }
     @GetMapping ("/search-books-by-author")
-    ResponseEntity<List<BookDto>> getByAuthor (@PathVariable String author){
+    ResponseEntity<List<BookDto>> findByAuthor (@PathVariable String author){
         return new ResponseEntity<>(bookService.findByAuthor(author), HttpStatus.OK);
     }
     @GetMapping ("/search-books-by-title")
-    ResponseEntity<List<BookDto>> getByTitle (@RequestParam ("title")String title){
+    ResponseEntity<List<BookDto>> findByTitle (@RequestParam ("title")String title){
         return new ResponseEntity<>(bookService.findByTitle(title), HttpStatus.OK);
     }
 }
