@@ -29,7 +29,7 @@ public class BookDto extends BaseDto {
     /**
      * dto book is enable or not
      */
-    private boolean isEnable=true;
+    private boolean isEnable = true;
 
 
 }

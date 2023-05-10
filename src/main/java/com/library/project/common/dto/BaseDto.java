@@ -23,7 +23,7 @@ public abstract class BaseDto {
     /**
      * state information. deleted 0, undeleted 1
      */
-    private short state=1;
+    private short state = 1;
 
     /**
      * version information

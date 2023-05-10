@@ -1,29 +1,39 @@
 package com.library.project.Service.implement;
 
+import com.library.project.Dto.BorrowerDto;
 import com.library.project.Entity.Borrower;
 import com.library.project.Repository.BorrowerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.library.project.Service.BorrowerService;
+import com.library.project.Service.mapper.BorrowerMapper;
+import com.library.project.common.service.implement.BaseService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BorrewerServiceImplement {
-    @Autowired
-    BorrowerRepository borrowerRepository;
+public class BorrewerServiceImplement extends BaseService<BorrowerRepository, BorrowerMapper,Borrower,BorrowerDto> implements BorrowerService {
 
+    private final BorrowerRepository borrowerRepository;
+    private final BorrowerMapper borrowerMapper;
 
-
-    public Borrower addBorrower(Borrower borrower) {
-
-
-        return borrowerRepository.save(borrower);
+    public BorrewerServiceImplement(BorrowerMapper mapper, BorrowerRepository repository,
+                                    BorrowerRepository borrowerRepository, BorrowerMapper borrowerMapper) {
+        super(mapper, repository);
+        this.borrowerRepository = borrowerRepository;
+        this.borrowerMapper = borrowerMapper;
     }
 
-    public void removeBorrower(Borrower borrower) {
-        borrowerRepository.delete(borrower);
+    @Override
+    public BorrowerDto addBorrower(BorrowerDto borrowerDto) {
+        return super.save(borrowerDto);
     }
 
-    public Borrower getBorrowerByEmail(String email) {
-        return borrowerRepository.findByEmail(email);
+    @Override
+    public void removeBorrower(BorrowerDto borrowerDto) {
+        super.deleteById(borrowerDto.getUuid());
+    }
+
+    @Override
+    public BorrowerDto getBorrower(BorrowerDto borrowerDto) {
+        return borrowerMapper.entityToDto(borrowerRepository.findByEmail(borrowerDto.getEmail()));
     }
 
 }

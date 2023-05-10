@@ -32,6 +32,7 @@ public abstract class BaseService<
         return mapper.entityListToDtoList(repository.findAll());
 
     }
+
     public DtoType findById(UUID uuid) {
 
         return mapper.entityToDto(repository.findById(uuid).orElseThrow(() -> new RuntimeException("can not find")));
@@ -51,7 +52,6 @@ public abstract class BaseService<
 
         repository.deleteAll(mapper.dtoListToEntityList(dtoTypeList));
     }
-
 
 
 }

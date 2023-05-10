@@ -15,7 +15,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "borrower")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -26,8 +26,8 @@ public class Borrower extends BaseEntity {
      * Borrowers name and surname
      */
     @NotBlank
-    @Column(name = "name_surname")
-    private String nameSurname;
+    @Column(name = "name")
+    private String name;
 
     /**
      * Borrowers email information
@@ -44,5 +44,5 @@ public class Borrower extends BaseEntity {
     private String phoneNumber;
 
     @OneToMany(mappedBy = "borrower")
-    private List<BookBorrower> bookBorrowerList;
+    private List<Book> bookList;
 }

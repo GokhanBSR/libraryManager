@@ -1,26 +1,30 @@
 package com.library.project.Service;
 
 import com.library.project.Dto.BookDto;
-import com.library.project.Entity.Book;
 import jakarta.persistence.Id;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 public interface BookService {
 
-    BookDto addBook (BookDto bookDto);
+    /**
+     * Adds a new book to the list of books
+     * @param bookDto add bookdto
+     * @return bookDto
+     */
+    BookDto addBook(BookDto bookDto);
 
-    BookDto getBook (BookDto bookDto);
+    /**
+     * Returns a book based on its ISBN
+     * @param bookDto
+     * @return
+     */
+    void removeBook(BookDto bookDto);
 
-    BookDto updateBook (BookDto bookDto);
+    BookDto getBook(BookDto bookDto);
 
-    void delete (BookDto bookDto);
-    void deleteById (Id id);
-    void deleAll (List<BookDto> bookDtos);
+    BookDto borrowBook(BookDto bookDto);
 
-    List<BookDto> findAll();
-    List<BookDto> findByAuthor();
-    List<BookDto> findByTitle();
-
+    BookDto returnBook(BookDto bookDto);
 
 }

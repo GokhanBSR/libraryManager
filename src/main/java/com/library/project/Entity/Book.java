@@ -5,12 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedBy;
-
-import java.util.List;
 
 @Entity
-@Table
+@Table(name = "book")
 @Getter
 @Setter
 @RequiredArgsConstructor
@@ -18,21 +15,21 @@ import java.util.List;
 public class Book extends BaseEntity {
 
     /**
-     *Entity Author info
+     * Entity Author info
      */
-    @Column (name = "author")
+    @Column(name = "author")
     private String author;
 
     /**
      * Entity Title info
      */
-    @Column (name = "title")
+    @Column(name = "title")
     private String title;
 
     /**
      * Entity ISBN infos
      */
-    @Column (name = "ISBN")
+    @Column(name = "ISBN")
     private String isbn;
 
     /**
@@ -40,12 +37,8 @@ public class Book extends BaseEntity {
      */
     private int availableCopies;
 
-    /**
-     * Entity Available copies info
-     */
-    @Column (name = "Enable")
-    private boolean isEnable=true;
-    @OneToMany(mappedBy = "book")
-    private List<BookBorrower> bookBorrowerList;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "book")
+    private Borrower borrower;
 
 }

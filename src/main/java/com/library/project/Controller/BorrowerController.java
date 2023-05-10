@@ -1,26 +1,36 @@
 package com.library.project.Controller;
 
 import com.library.project.Dto.BorrowerDto;
-import com.library.project.Service.BookService;
 import com.library.project.Service.BorrowerService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class BorrowerController {
     private final BorrowerService borrowerService;
-    private final BookService bookService;
 
-    public BorrowerController(BorrowerService borrowerService, BookService bookService) {
+
+    public BorrowerController(BorrowerService borrowerService) {
         this.borrowerService = borrowerService;
-        this.bookService = bookService;
     }
 
-    @RequestMapping(value = "/add-borrower", method = {RequestMethod.GET, RequestMethod.POST})
-    public String showBorrowerPage (@ModelAttribute (value = "borrower")BorrowerDto borrowerDto){
-        return "addUser";
+    @PostMapping("/add-borrower")
+    ResponseEntity<BorrowerDto> addBrower(@RequestBody BorrowerDto borrowerDto) {
+        return new ResponseEntity<>(borrowerService.addBorrower(borrowerDto), HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/remove-borrower")
+    void removeBook(@RequestBody BorrowerDto borrowerDto) {
+        borrowerService.removeBorrower(borrowerDto);
+    }
+
+    @GetMapping("/get-borrower")
+    ResponseEntity<BorrowerDto> getBorrower(@RequestBody BorrowerDto borrowerDto) {
+        return new ResponseEntity<>(borrowerService.getBorrower(borrowerDto), HttpStatus.OK);
+    }
 }

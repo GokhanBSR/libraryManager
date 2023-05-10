@@ -5,20 +5,17 @@ import com.library.project.common.dto.BaseDto;
 import java.util.List;
 import java.util.UUID;
 
-public interface BaseServiceInterface <DtoType extends BaseDto>  {
+public interface BaseServiceInterface<DtoType extends BaseDto> {
 
-    DtoType save (DtoType dtoType);
+    DtoType save(DtoType dtoType);
 
-    List<DtoType>saveAll (List<DtoType> dtoTypes);
+    List<DtoType> saveAll(List<DtoType> dtoTypes);
 
-    List<DtoType>findAll ();
+    List<DtoType> findAll();
 
-    DtoType findById (UUID uuid);
+    DtoType findById(UUID uuid);
 
-    void delete (DtoType dtoType);
-
-    void deleteById (DtoType dtoType);
-
+    void delete(DtoType dtoType);
 
 
 }

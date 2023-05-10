@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.PackagePrivate;
 
 @EqualsAndHashCode
 @NoArgsConstructor
@@ -20,7 +19,7 @@ public class BorrowerDto extends BaseDto {
      * dto username info
      */
     @NotBlank
-    @Size (min = 5, max = 100)
+    @Size(min = 5, max = 100)
     private String name;
 
 //    /**
@@ -35,13 +34,13 @@ public class BorrowerDto extends BaseDto {
      */
     @Email
     @NotBlank
-    @Size (min = 6, max = 30)
+    @Size(min = 6, max = 30)
     private String email;
 
     /**
      * dto phone number info
      */
-    @Size(min = 6, max = 20 )
+    @Size(min = 6, max = 20)
     private String phoneNumber;
 
 

@@ -12,46 +12,47 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookServiceImplement extends BaseService<BookRepository, BookMapper, Book, BookDto> implements BookService {
 
-//    @Autowired
-//    BookRepository bookRepository;
     private final BookRepository bookRepository;
-
-    @Autowired
-    public BookServiceImplement(BookMapper mapper, BookRepository repository, BookRepository bookRepository) {
-        super(mapper,repository);
-        this.bookRepository = bookRepository;
-    }
+    private final BookMapper bookMapper;
 
     /**
-     * book acount
-     * @param isbn
+     * Constructor Injection
+     * @param mapper mapper
+     * @param repository repository
+     * @param bookRepository
+     * @param bookMapper
      */
-    public void borrowBook(String isbn) {
-        Book book = bookRepository.findByIsbn(isbn);
-        if (book.getAvailableCopies() == 0) {
-
-        } else
-        {  book.setAvailableCopies(book.getAvailableCopies() - 1);
-        bookRepository.save(book);
-        }
-    }
-//kitap sayısı artıyor
-
-    public void returnBook(String isbn) {
-        Book book = bookRepository.findByIsbn(isbn);
-        book.setAvailableCopies(book.getAvailableCopies() + 1);
-        bookRepository.save(book);
+    @Autowired
+    public BookServiceImplement(BookMapper mapper, BookRepository repository, BookRepository bookRepository, BookMapper bookMapper) {
+        super(mapper, repository);
+        this.bookRepository = bookRepository;
+        this.bookMapper = bookMapper;
     }
 
-    public Book addBook(Book book) {
-        return bookRepository.save(book);
+    @Override
+    public BookDto addBook(BookDto bookDto) {
+        return super.save(bookDto);
     }
 
-    public void removeBook(Book book) {
-        bookRepository.delete(book);
+    @Override
+    public void removeBook(BookDto bookDto) {
+         super.deleteById(bookDto.getUuid());
     }
 
-    public Book getBook(String isbn) {
-        return bookRepository.findByIsbn(isbn);
+    @Override
+    public BookDto getBook(BookDto bookDto) {
+        return bookMapper.entityToDto(bookRepository.findByIsbn(bookDto.getIsbn()));
     }
+
+    @Override
+    public BookDto borrowBook(BookDto bookDto) {
+        return super.save(bookDto);
+    }
+
+    @Override
+    public BookDto returnBook(BookDto bookDto) {
+        return null;
+    }
+
+
 }

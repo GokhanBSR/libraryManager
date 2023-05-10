@@ -10,9 +10,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class LibraryApplication {
     public static void main(String[] args) {
-        try (ConfigurableApplicationContext context =
-                     SpringApplication.run(LibraryApplication.class, args)) {
-            System.out.println("eee " + context);
-        }
+        SpringApplication.run(LibraryApplication.class, args);
     }
 }

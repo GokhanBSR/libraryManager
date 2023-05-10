@@ -14,29 +14,35 @@ import java.util.List;
 public class BookController {
     private final BookService bookService;
     private final BorrowerService borrowerService;
-    private final BookRepository bookRepository;
 
-    public BookController(BookService bookService, BorrowerService borrowerService,
-                          BookRepository bookRepository) {
+    public BookController(BookService bookService, BorrowerService borrowerService) {
         this.bookService = bookService;
         this.borrowerService = borrowerService;
-        this.bookRepository = bookRepository;
     }
-    @GetMapping ("/add-book")
-    ResponseEntity<BookDto>addBook(@RequestBody BookDto bookDto){
+
+    @PostMapping("/add-book")
+    ResponseEntity<BookDto> addBook(@RequestBody BookDto bookDto) {
         return new ResponseEntity<>(bookService.addBook(bookDto), HttpStatus.CREATED);
     }
 
-    @GetMapping ("/get-all-books")
-    ResponseEntity<List<BookDto>> allBooks(){
-        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
+    @DeleteMapping("/remove-book")
+    void removeBook(@RequestBody BookDto bookDto) {
+        bookService.removeBook(bookDto);
     }
-    @GetMapping ("/search-books-by-author")
-    ResponseEntity<List<BookDto>> findByAuthor (@PathVariable String author){
-        return new ResponseEntity<>(bookService.findByAuthor(author), HttpStatus.OK);
+
+    @GetMapping("/get-book")
+    ResponseEntity<BookDto> getBook(@RequestBody BookDto bookDto) {
+        return new ResponseEntity<>(bookService.getBook(bookDto),HttpStatus.OK);
     }
-    @GetMapping ("/search-books-by-title")
-    ResponseEntity<List<BookDto>> findByTitle (@RequestParam ("title")String title){
-        return new ResponseEntity<>(bookService.findByTitle(title), HttpStatus.OK);
+
+    @PostMapping("/borrow-book")
+    ResponseEntity<BookDto> borrowBook(@RequestBody BookDto bookDto) {
+        return new ResponseEntity<>(bookService.borrowBook(bookDto),HttpStatus.OK);
     }
+
+    @GetMapping("/return-book")
+    ResponseEntity<BookDto> returnBook(@RequestBody BookDto bookDto) {
+        return new ResponseEntity<>(bookService.returnBook(bookDto),HttpStatus.OK);
+    }
+
 }
