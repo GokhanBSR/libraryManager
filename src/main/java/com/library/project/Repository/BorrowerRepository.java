@@ -7,22 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.UUID;
 
-@Repository
+@Repository // spring stereotype
 public interface BorrowerRepository extends BaseRepository<Borrower, UUID> {
-
-    //    /**
-//     * @param title
-//     * @return title
-//     */
-////    List<Borrower> findByTitleIgnoreCase(String title);
-//
-//    /**
-//     * Drived query
-//     * @param nameSurname
-//     * @return borrower name and surname
-//     */
-//    //    @Query("SELECT c FROM User c JOIN c.roles r WHERE c.username =:username")
-//    List<Borrower> findByNameSurnameContainingIgnoreCase(String nameSurname);
 
     /**
      * drived query
@@ -30,7 +16,6 @@ public interface BorrowerRepository extends BaseRepository<Borrower, UUID> {
      * @return borrower email
      */
     Borrower findByEmail(String email);
-
 
     /**
      * drived query

@@ -14,6 +14,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * this pojo class is the one of 2 entity class
+ */
 @Entity
 @Table(name = "borrower")
 @Getter
@@ -23,7 +26,7 @@ import java.util.List;
 public class Borrower extends BaseEntity {
 
     /**
-     * Borrowers name and surname
+     * Borrowers name information
      */
     @NotBlank
     @Column(name = "name")
@@ -43,6 +46,9 @@ public class Borrower extends BaseEntity {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    /**
+     * relation book and borrower
+     */
     @OneToMany(mappedBy = "borrower")
     private List<Book> bookList;
 }

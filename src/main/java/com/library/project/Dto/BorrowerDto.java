@@ -22,13 +22,6 @@ public class BorrowerDto extends BaseDto {
     @Size(min = 5, max = 100)
     private String name;
 
-//    /**
-//     * Borrower password info
-//     */
-//    @NotBlank
-//    @Size(min = 8, max = 100)
-//    private String password;
-
     /**
      * dto email info
      */
@@ -42,6 +35,5 @@ public class BorrowerDto extends BaseDto {
      */
     @Size(min = 6, max = 20)
     private String phoneNumber;
-
 
 }

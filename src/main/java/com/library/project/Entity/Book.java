@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+/**
+ * this pojo class is the one of 2 entity class
+ */
 @Entity
 @Table(name = "book")
 @Getter
@@ -37,6 +40,10 @@ public class Book extends BaseEntity {
      */
     private int availableCopies;
 
+    /**
+     * relation  borrower and book
+     * cascade and fetch strategies
+     */
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "book")
     private Borrower borrower;

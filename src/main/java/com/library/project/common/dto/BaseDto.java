@@ -8,6 +8,9 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.UUID;
 
+/**
+ * bookDto and borrowerDto classes inherit by this class
+ */
 @Getter
 @Setter
 @SuperBuilder
@@ -29,6 +32,5 @@ public abstract class BaseDto {
      * version information
      */
     private long version;
-
 
 }

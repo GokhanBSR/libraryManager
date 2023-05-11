@@ -6,7 +6,6 @@ public interface BorrowerService {
 
     /**
      * Adds a new borrower to the list of borrowers
-     *
      * @param borrowerDto
      * @return
      */
@@ -21,7 +20,6 @@ public interface BorrowerService {
 
     /**
      * Returns a borrower based on their email
-     *
      * @param borrowerDto
      * @return
      */

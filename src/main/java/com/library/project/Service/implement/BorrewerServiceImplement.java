@@ -8,11 +8,11 @@ import com.library.project.Service.mapper.BorrowerMapper;
 import com.library.project.common.service.implement.BaseService;
 import org.springframework.stereotype.Service;
 
-@Service
-public class BorrewerServiceImplement extends BaseService<BorrowerRepository, BorrowerMapper,Borrower,BorrowerDto> implements BorrowerService {
+@Service  // spring stereotype
+public class BorrewerServiceImplement extends BaseService<BorrowerRepository, BorrowerMapper, Borrower, BorrowerDto> implements BorrowerService {
 
-    private final BorrowerRepository borrowerRepository;
-    private final BorrowerMapper borrowerMapper;
+    private final BorrowerRepository borrowerRepository;  //constructor injection
+    private final BorrowerMapper borrowerMapper;  //constructor injection
 
     public BorrewerServiceImplement(BorrowerMapper mapper, BorrowerRepository repository,
                                     BorrowerRepository borrowerRepository, BorrowerMapper borrowerMapper) {

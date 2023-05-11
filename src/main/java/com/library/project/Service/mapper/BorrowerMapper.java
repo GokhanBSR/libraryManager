@@ -1,7 +1,6 @@
 package com.library.project.Service.mapper;
 
 import com.library.project.Dto.BorrowerDto;
-import com.library.project.Entity.Book;
 import com.library.project.Entity.Borrower;
 import com.library.project.common.mapper.BaseMapper;
 import org.mapstruct.*;
@@ -11,8 +10,6 @@ import org.springframework.util.CollectionUtils;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR, builder = @Builder)
 public interface BorrowerMapper extends BaseMapper<BorrowerDto, Borrower> {
 
-
-    //Sonradan düzenlenecek
     @AfterMapping
     default void setParentToChild(@MappingTarget Borrower borrower) {
         if (!CollectionUtils.isEmpty(borrower.getBookList())){

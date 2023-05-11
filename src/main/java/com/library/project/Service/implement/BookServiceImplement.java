@@ -9,16 +9,17 @@ import com.library.project.common.service.implement.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service // spring stereotype
 public class BookServiceImplement extends BaseService<BookRepository, BookMapper, Book, BookDto> implements BookService {
 
-    private final BookRepository bookRepository;
-    private final BookMapper bookMapper;
+    private final BookRepository bookRepository; //constructor injection
+    private final BookMapper bookMapper; //constructor injection
 
     /**
      * Constructor Injection
-     * @param mapper mapper
-     * @param repository repository
+     *
+     * @param mapper         mapper
+     * @param repository     repository
      * @param bookRepository
      * @param bookMapper
      */
@@ -29,6 +30,12 @@ public class BookServiceImplement extends BaseService<BookRepository, BookMapper
         this.bookMapper = bookMapper;
     }
 
+    /**
+     * override metots from bookService
+     *
+     * @param bookDto
+     * @return super's save metot as bookDto
+     */
     @Override
     public BookDto addBook(BookDto bookDto) {
         return super.save(bookDto);
@@ -36,7 +43,7 @@ public class BookServiceImplement extends BaseService<BookRepository, BookMapper
 
     @Override
     public void removeBook(BookDto bookDto) {
-         super.deleteById(bookDto.getUuid());
+        super.deleteById(bookDto.getUuid());
     }
 
     @Override

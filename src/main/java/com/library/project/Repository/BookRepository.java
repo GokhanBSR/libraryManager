@@ -7,16 +7,16 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.UUID;
 
-@Repository
+@Repository // spring stereotype
 public interface BookRepository extends BaseRepository<Book, UUID> {
-//
-//    /**
-//     * drived query
-//     * @param uuids
-//     * @return book uuid
-//     */
-////    List<Book> findAllByUuid(UUID uuids);
-//
+
+    /**
+     * drived query
+     *
+     * @param isbn
+     * @return find by book isbn info
+     */
+    Book findByIsbn(String isbn);
 
     /**
      * drived query
@@ -26,17 +26,8 @@ public interface BookRepository extends BaseRepository<Book, UUID> {
      */
     List<Book> findByTitle(String title);
 
-    //
-//    /**
-//     * drived query
-//     * @param author
-//     * @return book author
-//     */
-//    List<Book> findByAuthor(String author);
-    Book findByIsbn(String isbn);
 
-//    Book findByCreateDate (LocalDateTime localDateTime);
-//    Book findByCategory (String category);
+
 
 
 }

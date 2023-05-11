@@ -16,9 +16,16 @@ public abstract class BaseService<
         MapperType extends BaseMapper<DtoType, EntityType>,
         EntityType extends BaseEntity,
         DtoType extends BaseDto> implements BaseServiceInterface<DtoType> {
-    protected final MapperType mapper;
-    protected final RepositoryType repository;
+    protected final MapperType mapper;   //constructor injection
+    protected final RepositoryType repository;    //constructor injection
 
+    /**
+     * save metot
+     * dto to entity
+     *
+     * @param dto
+     * @return dto
+     */
     public DtoType save(DtoType dto) {
         return mapper.entityToDto(repository.save(mapper.dtoToEntity(dto)));
     }
@@ -30,19 +37,34 @@ public abstract class BaseService<
     public List<DtoType> findAll() {
 
         return mapper.entityListToDtoList(repository.findAll());
-
     }
 
+    /**
+     * drived query ById. return UUID or throw an exception.
+     *
+     * @param uuid
+     * @return UUID
+     */
     public DtoType findById(UUID uuid) {
 
         return mapper.entityToDto(repository.findById(uuid).orElseThrow(() -> new RuntimeException("can not find")));
     }
 
+    /**
+     * delete metot. void doesn't return.
+     *
+     * @param dto
+     */
     public void delete(DtoType dto) {
 
         repository.delete(mapper.dtoToEntity(dto));
     }
 
+    /**
+     * delete metot as Id
+     *
+     * @param uuid
+     */
     public void deleteById(UUID uuid) {
 
         repository.deleteById(uuid);

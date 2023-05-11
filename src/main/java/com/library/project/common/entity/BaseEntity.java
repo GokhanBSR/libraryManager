@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * bookEntity and borrowerEntity classes inherit by this class
+ */
 @Getter
 @Setter
 @SuperBuilder

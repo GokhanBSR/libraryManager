@@ -1,6 +1,8 @@
 package com.library.project;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConnectionUtil {
 
@@ -15,16 +17,22 @@ public class ConnectionUtil {
 
 
     /**
-     * singleton design pattern
-     * @return
+     * singleton design pattern: Using static keyword
+     *
+     * @return sigleton object
      */
     public static Connection getConnection() {
 
-        // create object if it's not already created
-        if(connection == null) {
+        /**
+         *  create object if it's not already created
+         */
+        if (connection == null) {
             connection = getConnection();
         }
-        // returns the singleton object
+
+        /**
+         *  returns the singleton object
+         */
         else {
             try {
                 Class.forName("org.postgresql.Driver");
@@ -35,5 +43,4 @@ public class ConnectionUtil {
         }
         return connection;
     }
-
 }

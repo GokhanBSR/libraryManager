@@ -1,9 +1,6 @@
 package com.library.project.Service;
 
 import com.library.project.Dto.BookDto;
-import jakarta.persistence.Id;
-
-import java.util.List;
 
 public interface BookService {
 
@@ -15,7 +12,8 @@ public interface BookService {
     BookDto addBook(BookDto bookDto);
 
     /**
-     * Returns a book based on its ISBN
+     * Remove book from list of book
+     *
      * @param bookDto
      * @return
      */
