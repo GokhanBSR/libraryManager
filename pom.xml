@@ -11,7 +11,7 @@
 
     <groupId>com.library.project</groupId>
     <artifactId>LibraryManager</artifactId>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.8-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>LibraryManager</name>
     <description>Library Management program</description>
