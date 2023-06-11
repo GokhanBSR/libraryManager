@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.ansonika.com/sparker/admin_section/add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Dec 2018 07:10:50 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="Library Manager" name="author">
+    <title>Library Manager</title>
+
+    <!-- Favicons-->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main styles -->
+    <link href="css/admin.css" rel="stylesheet">
+    <!-- Icon fonts-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Plugin styles -->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="vendor/dropzone.css" rel="stylesheet">
+    <link href="css/date_picker.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- WYSIWYG Editor -->
+    <link href="js/editor/summernote-bs4.css" rel="stylesheet">
+
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html"><img alt="" data-retina="true" height="36" src="img/logo12.png"
+                                                   width="165"></a>
+    <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+            type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Books">
+                <a class="nav-link" href="add-listing.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Books</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Add user">
+                <a class="nav-link" href="user-profile.html">
+                    <i class="fa fa-fw fa-user"></i>
+                    <span class="nav-link-text">Add User</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Magazines">
+                <a class="nav-link" href="messages.html">
+                    <i class="fa fa-fw fa-envelope-open"></i>
+                    <span class="nav-link-text">Magazines</span>
+                </a>
+            </li>
+            <li class="nav-item" data-original-title="Reports" data-placement="right" data-toggle="tooltip" title="">
+                <a class="nav-link" href="bookings.html">
+                    <i class="fa fa-fw fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Reports </span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Articles">
+                <a class="nav-link" href="bookmarks.html">
+                    <i class="fa fa-fw fa-heart"></i>
+                    <span class="nav-link-text">Articles</span>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Images">
+                <a class="nav-link" href="">
+                    <i class="fa fa-fw fa-plus-circle"></i>
+                    <span class="nav-link-text">Images</span>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="News">
+                <a class="nav-link" href="user-profile.html">
+                    <i class="fa fa-fw fa-user"></i>
+                    <span class="nav-link-text">News</span>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-target="#exampleModal" data-toggle="modal">
+                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- /Navigation-->
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Admin</a>
+            </li>
+            <li class="breadcrumb-item active">Add Book</li>
+        </ol>
+
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2>Add Book</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="pricing-list-container" style="width:100%;">
+                        <tr class="pricing-list-item">
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Title" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Author" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="ISBN" type="text">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <a class="btn_1 gray add-pricing-list-item" href="#0"><i class="fa fa-fw fa-plus-circle"></i>Add
+                        Book</a>
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
+        <!-- /box_general-->
+        <p><a class="btn_1 medium" href="#0">Save</a></p>
+    </div>
+    <!-- /.container-fluid-->
+</div>
+<!-- /.container-wrapper-->
+<footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © 2023</small>
+        </div>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+<!-- Logout Modal-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Page level plugin JavaScript-->
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/datatables/jquery.dataTables.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<script src="vendor/jquery.selectbox-0.2.js"></script>
+<script src="vendor/retina-replace.min.js"></script>
+<script src="vendor/jquery.magnific-popup.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/admin.js"></script>
+<!-- Custom scripts for this page-->
+<script src="vendor/dropzone.min.js"></script>
+<script src="vendor/bootstrap-datepicker.js"></script>
+<script>$('input.date-pick').datepicker();</script>
+<!-- WYSIWYG Editor -->
+<script src="js/editor/summernote-bs4.min.js"></script>
+<script>
+      $('.editor').summernote({
+		fontSizes: ['10', '14'],
+		toolbar: [
+			// [groupName, [list of button]]
+			['style', ['bold', 'italic', 'underline', 'clear']],
+			['font', ['strikethrough']],
+			['fontsize', ['fontsize']],
+			['para', ['ul', 'ol', 'paragraph']]
+		  ],
+        placeholder: 'Write here ....',
+        tabsize: 2,
+        height: 200
+      });
+
+</script>
+
+</body>
+
+
+</html>

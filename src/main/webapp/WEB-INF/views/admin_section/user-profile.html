@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.ansonika.com/sparker/admin_section/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Dec 2018 07:15:00 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="Ansonika" name="author">
+    <title>Library Manager</title>
+
+    <!-- Favicons-->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main styles -->
+    <link href="css/admin.css" rel="stylesheet">
+    <!-- Icon fonts-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Plugin styles -->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="vendor/dropzone.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html"><img alt="" data-retina="true" height="36" src="img/logo.png" width="165"></a>
+    <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+            type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Books">
+                <a class="nav-link" href="add-listing.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Books</span>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Add user">
+                <a class="nav-link" href="user-profile.html">
+                    <i class="fa fa-fw fa-user"></i>
+                    <span class="nav-link-text">Add User</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Magazines">
+                <a class="nav-link" href="messages.html">
+                    <i class="fa fa-fw fa-envelope-open"></i>
+                    <span class="nav-link-text">Magazines</span>
+                </a>
+            </li>
+            <li class="nav-item" data-original-title="Reports" data-placement="right" data-toggle="tooltip" title="">
+                <a class="nav-link" href="bookings.html">
+                    <i class="fa fa-fw fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Reports </span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Articles">
+                <a class="nav-link" href="bookmarks.html">
+                    <i class="fa fa-fw fa-heart"></i>
+                    <span class="nav-link-text">Articles</span>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Images">
+                <a class="nav-link" href="">
+                    <i class="fa fa-fw fa-plus-circle"></i>
+                    <span class="nav-link-text">Images</span>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="right" data-toggle="tooltip" title="News">
+                <a class="nav-link" href="user-profile.html">
+                    <i class="fa fa-fw fa-user"></i>
+                    <span class="nav-link-text">News</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle mr-lg-2"
+                   data-toggle="dropdown" href="#" id="messagesDropdown">
+                    <i class="fa fa-fw fa-envelope"></i>
+                    <span class="d-lg-none">Messages
+              <span class="badge badge-pill badge-primary">12 New</span>
+            </span>
+                    <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+                </a>
+                <div aria-labelledby="messagesDropdown" class="dropdown-menu">
+                    <h6 class="dropdown-header">New Messages:</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>David Miller</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome!
+                            These messages clip off when they reach the end of the box so they don't overflow over to
+                            the sides!
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>Jane Smith</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00
+                            instead of 4:00. Thanks!
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <strong>John Doe</strong>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">I've sent the final files over to you for review. When
+                            you're able to sign off of them let me know and we can discuss distribution.
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item small" href="#">View all messages</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle mr-lg-2"
+                   data-toggle="dropdown" href="#" id="alertsDropdown">
+                    <i class="fa fa-fw fa-bell"></i>
+                    <span class="d-lg-none">Alerts
+              <span class="badge badge-pill badge-warning">6 New</span>
+            </span>
+                    <span class="indicator text-warning d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+                </a>
+                <div aria-labelledby="alertsDropdown" class="dropdown-menu">
+                    <h6 class="dropdown-header">New Alerts:</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems
+                            are online.
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-danger">
+                <strong>
+                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems
+                            are online.
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+                        <span class="small float-right text-muted">11:21 AM</span>
+                        <div class="dropdown-message small">This is an automated server response message. All systems
+                            are online.
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item small" href="#">View all alerts</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-target="#exampleModal" data-toggle="modal">
+                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- /Navigation-->
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Add listing</li>
+        </ol>
+        <div class="box_general padding_bottom">
+            <div class="header_box version_2">
+                <h2><i class="fa fa-user"></i>Profile details</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Your photo</label>
+                        <form action="http://www.ansonika.com/file-upload" class="dropzone"></form>
+                    </div>
+                </div>
+                <div class="col-md-8 add_top_30">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control" placeholder="Your name" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last name</label>
+                                <input class="form-control" placeholder="Your last name" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Telephone</label>
+                                <input class="form-control" placeholder="Your telephone number" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" placeholder="Your email" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Personal info</label>
+                                <textarea class="form-control" placeholder="Personal info"
+                                          style="height:100px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row-->
+                </div>
+            </div>
+        </div>
+        <!-- /box_general-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box_general padding_bottom">
+                    <div class="header_box version_2">
+                        <h2><i class="fa fa-lock"></i>Change password</h2>
+                    </div>
+                    <div class="form-group">
+                        <label>Old password</label>
+                        <input class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label>New password</label>
+                        <input class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm new password</label>
+                        <input class="form-control" type="password">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box_general padding_bottom">
+                    <div class="header_box version_2">
+                        <h2><i class="fa fa-envelope"></i>Change email</h2>
+                    </div>
+                    <div class="form-group">
+                        <label>Old email</label>
+                        <input class="form-control" id="old_email" name="old_email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label>New email</label>
+                        <input class="form-control" id="new_email" name="new_email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm new email</label>
+                        <input class="form-control" id="confirm_new_email" name="confirm_new_email" type="email">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /row-->
+        <p><a class="btn_1 medium" href="#0">Save</a></p>
+    </div>
+    <!-- /.container-fluid-->
+</div>
+<!-- /.container-wrapper-->
+<footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © SPARKER 2018</small>
+        </div>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+<!-- Logout Modal-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Page level plugin JavaScript-->
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/datatables/jquery.dataTables.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<script src="vendor/jquery.selectbox-0.2.js"></script>
+<script src="vendor/retina-replace.min.js"></script>
+<script src="vendor/jquery.magnific-popup.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/admin.js"></script>
+<!-- Custom scripts for this page-->
+<script src="vendor/dropzone.min.js"></script>
+
+</body>
+
+<!-- Mirrored from www.ansonika.com/sparker/admin_section/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Dec 2018 07:15:00 GMT -->
+</html>

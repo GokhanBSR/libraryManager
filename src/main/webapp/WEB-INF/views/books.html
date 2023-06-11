@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>Library Manager</title>
+
+    <!-- Favicons-->
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+
+    <!-- ALTERNATIVE COLORS CSS -->
+    <link href="#" id="colors" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="theia-exception" id="page">
+
+    <header class="header_in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img alt="" class="logo_sticky" height="75" src="img/logo123.png" width="200">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <ul id="top_menu">
+                        <li><a class="btn_add" href="books.html" target="_blank">Newest</a></li>
+
+                    </ul>
+                    <!-- /top_menu -->
+                    <a class="btn_mobile" href="#menu">
+                        <div class="hamburger hamburger--spin" id="hamburger">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <nav class="main-menu" id="menu">
+                        <ul>
+                            <li><span><a href="index.html">Home</a></span>
+                            </li>
+                            <li><span><a href="#0">Comments</a></span>
+
+                            </li>
+
+
+                            <li><span><a href="#0">Login</a></span>
+
+                            </li>
+                            <li><span><a href="#0">Contact</a></span>
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+        <!-- search_mobile -->
+        <div class="layer"></div>
+        <div id="search_mobile">
+            <a class="side_panel" href="#"><i class="icon_close"></i></a>
+            <div class="custom-search-input-2">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Search" type="text">
+                    <i class="icon_search"></i>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Author" type="text">
+                    <i class="icon_pin_alt"></i>
+                </div>
+                <select class="wide">
+                    <option>Category</option>
+                    <option>Books</option>
+
+                </select>
+                <input type="submit" value="Search">
+            </div>
+        </div>
+        <!-- /search_mobile -->
+    </header>
+    <!-- /header -->
+
+    <main>
+        <div id="results">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-10">
+
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-2">
+                        <a class="side_panel btn_search_mobile" href="#0"></a> <!-- /open search panel -->
+                        <div class="row no-gutters custom-search-input-2 inner">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Search" type="text">
+                                    <i class="icon_search"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Author" type="text">
+                                    <i class=" icon-user-2"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <select class="wide">
+                                    <option>Category</option>
+                                    <option>Books</option>
+
+                                </select>
+                            </div>
+                            <div class="col-lg-1">
+                                <input type="submit" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /results -->
+
+        <div class="filters_listing version_2  sticky_horizontal">
+            <div class="container">
+                <ul class="clearfix">
+                    <li>
+                        <div class="switch-field">
+                            <input checked id="all" name="listing_filter" type="radio" value="all">
+                            <label for="all">All</label>
+                            <input id="popular" name="listing_filter" type="radio" value="popular">
+                            <label for="popular">Popular</label>
+                            <input id="latest" name="listing_filter" type="radio" value="latest">
+                            <label for="latest">Latest</label>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /filters -->
+
+        <div class="collapse" id="collapseMap">
+            <div class="map" id="map"></div>
+        </div>
+        <!-- /Map -->
+
+        <div class="container margin_60_35">
+            <div class="row">
+                <aside class="col-lg-3" id="sidebar">
+                    <div id="filters_col">
+                        <a aria-controls="collapseFilters" aria-expanded="false" data-toggle="collapse"
+                           href="#collapseFilters" id="filters_col_bt">Filter</a>
+                        <div class="collapse show" id="collapseFilters">
+                            <div class="filter_type">
+                                <h6>Category</h6>
+                                <ul>
+                                    <li>
+                                        <label class="container_check">Books <small>252 </small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="container_check">Magazines<small>900</small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="container_check">Reports <small>265</small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="container_check">Articles<small>600</small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="container_check">Images<small>600</small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="container_check">News<small>920</small>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <!--/collapse -->
+                    </div>
+                    <!--/filters col-->
+                </aside>
+                <!-- /aside -->
+
+                <div class="col-lg-9">
+                    <div class="strip list_view">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5">
+                                <figure>
+                                    <a href="detail-restaurant.html"><img alt="" class="img-fluid"
+                                                                          src="img/location_1.jpg">
+                                        <div class="read_more"><span>Oku</span></div>
+                                    </a>
+                                    <small>KİTAP</small>
+                                </figure>
+                            </div>
+                            <p class="text-center"><a class="btn_1 rounded add_top_30" href="#0">Show All</a></p>
+                        </div>
+                        <!-- /col -->
+                    </div>
+                </div>
+                <!-- /container -->
+
+    </main>
+    <!--/main-->
+
+    <footer>
+        <div class="container margin_60_35">
+
+            <!-- /row-->
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="follow_us">
+                        <ul>
+                            <li><a href="https://www.facebook.com/"><i class="ti-facebook"></i></a></li>
+                            <li><a href="https://twitter.com"><i class="ti-twitter-alt"></i></a></li>
+                            <li><a href="https://www.youtube.com"><i class="ti-youtube"></i></a></li>
+                            <li><a href="https://www.instagram.com><i class=" ti-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul id="additional_links">
+                        <li><a href="">Contact</a></li>
+                        <li><span>Basara Developing ©2023 </span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/footer-->
+</div>
+<!-- page -->
+
+
+<div id="toTop"></div><!-- Back to top button -->
+
+<!-- COMMON SCRIPTS -->
+<script src="js/common_scripts.js"></script>
+<script src="js/functions.js"></script>
+<script src="assets/validate.js"></script>
+
+<!-- Map -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBnG1RgQ8jpVgciCQQyuj50URjMIVl9kDo"></script>
+<script src="js/markerclusterer.js"></script>
+<script src="js/map.js"></script>
+<script src="js/infobox.js"></script>
+
+
+</body>
+
+</html>

@@ -27,9 +27,9 @@ books and borrowers. </p>
  4. The system use JDBC to connect to the database.
  5. The system expose a REST API to allow users to interact with the system over
     the web.
- 6. Code includes Singleton and Factory design patterns
- 7. Using JDBC connections
- 8. Using Spring Boot to expose a REST API
+6. Code includes Singleton and Factory design patterns
+7. Using JDBC connections
+8. Using Spring Boot to expose a REST API
 
 ## USING TECHNOLOGIES
 
@@ -37,3 +37,5 @@ books and borrowers. </p>
 * **Framework:** Spring Boot (3.0.6)
 * **Database:** PostgreSQL
 * **IDE:** Intellij Idea
+
+## THANK YOU
