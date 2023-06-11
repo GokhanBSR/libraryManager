@@ -46,7 +46,6 @@ public abstract class BaseService<
      * @return UUID
      */
     public DtoType findById(UUID uuid) {
-
         return mapper.entityToDto(repository.findById(uuid).orElseThrow(() -> new RuntimeException("can not find")));
     }
 
@@ -66,12 +65,10 @@ public abstract class BaseService<
      * @param uuid
      */
     public void deleteById(UUID uuid) {
-
         repository.deleteById(uuid);
     }
 
     public void deleteAll(List<DtoType> dtoTypeList) {
-
         repository.deleteAll(mapper.dtoListToEntityList(dtoTypeList));
     }
 

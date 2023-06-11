@@ -2,7 +2,6 @@ package com.library.project.Entity;
 
 import com.library.project.common.entity.BaseEntity;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -17,7 +16,6 @@ import java.util.List;
 /**
  * this pojo class is the one of 2 entity class
  */
-@Entity
 @Table(name = "borrower")
 @Getter
 @Setter

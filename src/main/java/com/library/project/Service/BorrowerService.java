@@ -6,7 +6,6 @@ public interface BorrowerService {
 
     /**
      * Adds a new borrower to the list of borrowers
-     * @param borrowerDto
      * @return
      */
     BorrowerDto addBorrower(BorrowerDto borrowerDto);
